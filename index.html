@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>SketchPad</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="title"><h1>SketchPad</h1></div>
+        <div class="mode">Mode: Coloring</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button onclick="changeColor('black')">Black</button>
+                <button onclick="changeColor('white')">Erasor</button>
+                <button onclick="changeColor('gray')">Gray</button>
+                <button onclick="changeColor('random')">Random</button>
+                <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)" />
+                <button>Set Size</button>
+                <input type="color" id="colorInputColor"/>
+                <button onclick="cchangeColor(color)">Choose your Color</button>
+            </div>
+            <div class="error">Input must be between 2 and 100</div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="main.js"></script>
